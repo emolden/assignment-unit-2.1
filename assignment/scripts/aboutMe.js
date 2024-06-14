@@ -12,7 +12,7 @@ let fullName = firstName + ' ' + lastName;
   console.log(fullName);
 // 4 - Create a variable called `luckyNumber` and assign it the value of your lucky number.
 //     Console log the value of `luckyNumber`
-let luckyNumber = 26;
+let luckyNumber = 1;
   console.log(luckyNumber);
 // 5 - Create a variable `introduction` and using the variables from above,
 //     give it the value of:
@@ -23,7 +23,7 @@ let introduction = 'My name is ' + fullName + ' and I think ' + luckyNumber + ' 
   console.log(introduction);
 // 6 - Create a variable named `adventurous` and set it to a boolean value (true or false)
 //     Console log the value of `adventurous`
-let adventurous = true;
+let adventurous = false;
   console.log(adventurous);
 
 // 7 - Create a variable named `food`, and set its value to a string of your favorite food
@@ -37,7 +37,7 @@ let pets = 1;
   console.log(pets);
 
 // 9 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
-let friendsPets = 4;
+let friendsPets = 2;
 // 10 - Add two pets to your `pets` variable
 pets += 2;
   console.log(pets);
@@ -47,13 +47,15 @@ const allowedPets = 3;
 //      if adventurous is true, set `result` to be "Adventures are great!", 
 //      if it's not true,  set `result` to be "How about we stay home?"
 //      Console log the value of `result`
-var result = 'result';
-if (adventurous = true) {
-  result ='Adventures are great!'
-}
-  else  {
-    result = 'How about we stay home?'
-  }
+
+let result = (adventurous == true) ? 'Adventures are great!' : 'How about we stay home?';
+//let result = 'result';
+//if (adventurous == true) {
+ // result ='Adventures are great!'
+//}
+//  else  {
+ //   result = 'How about we stay home?'
+ // }
     console.log (result);
 
 // 13 - Create a variable called `diceRoll` and set it to the value of "Try again later.".
@@ -61,10 +63,11 @@ if (adventurous = true) {
 //      if luckyNumber is 2 and adventurous is true,
 //      set `diceRoll` to be "Roll the dice!"
 //      Console log the value of `diceRoll`
-var diceRoll = 'Try again later.';
-if (luckyNumber = 2, adventurous = true ) [
-  diceRoll = 'Roll the dice!'
-]
+let diceRoll = 'Try again later.';
+if (luckyNumber == 2 && adventurous == true ) {
+   diceRoll = 'Roll the dice!'
+}
+
   console.log(diceRoll);
 
 // 14 - Create a variable called `petStatus`. 
@@ -75,19 +78,19 @@ if (luckyNumber = 2, adventurous = true ) [
 //      set `petStatus` to the value of "I have enough pets" 
 //      if the value of `pets` is greater than the value of `allowedPets`.
 //      set `petStatus` to the value of "Oh no, I have too many pets!"
-var petStatus = 'Pet Status';
+let petStatus = 'Pet Status';
 if (pets < allowedPets) {
   petStatus = "I can have more pets"
 }
-  else if (pets === allowedPets) {
+  else if (pets == allowedPets) {
     petStatus = 'I have enough pets'
   }
   //This code didn't work properly when I had pets = allowedPets. I needed to have pets ===allowedPets
-  //Whey did pets = allowedPets come out at "true" even if they weren't equal?
+  //Why did pets = allowedPets come out at "true" even if they weren't equal?
   else {
     petStatus = 'Oh no, I have too many pets!'
   }
-  console.log (petStatus);
+    console.log (petStatus);
 // STRETCH GOALS:
 
 // 15 - Make a variable called `mostPets` and a conditional that
@@ -95,6 +98,15 @@ if (pets < allowedPets) {
 //      assigns the highest value to `mostPets`. There's several possibilities --
 //      be sure to think through all the scenarios. 
 //      console.log `mostPets` after the conditional has run.
+let mostPets = 0;
+
+if (pets >= friendsPets) {
+  mostPets = pets
+}
+  else {
+   mostPets = friendsPets
+  }
+    console.log (mostPets);
 
 // 16 - Make a variable called `luckyResult`
 //      Write a *switch* statement that sets `luckyResult` to:
@@ -104,7 +116,22 @@ if (pets < allowedPets) {
 //      Otherwise, "Luck is what happens when preparation meets opportunity"
 //      You'll need to research how to use switch statements!
 //      console.log `luckyResult` after the conditional has run.
+let luckyResult = 'Result';
+switch (luckyNumber){
+  case 1:
+    luckyResult = 'First is the worst';
+    break;
+  case 2:
+    luckyResult = 'Second is the best';
+    break;
+  case 3:
+    luckyResult = 'Third is the one with the polka dot dress';
+    break;
+  default:
+    luckyResult = 'Luck is what happens when preparation meets opportunity';
+}
 
+    console.log (luckyResult);
 // 17 -- Rewrite question 12 with a `ternary` operator. You'll need to do research!
 
 
