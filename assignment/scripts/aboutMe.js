@@ -12,8 +12,8 @@ let fullName = firstName + ' ' + lastName;
   console.log(fullName);
 // 4 - Create a variable called `luckyNumber` and assign it the value of your lucky number.
 //     Console log the value of `luckyNumber`
-let luckyNumber = 1;
-  console.log(luckyNumber);
+let luckyNumber = 26;
+  console.log('lucky number ' + luckyNumber);
 // 5 - Create a variable `introduction` and using the variables from above,
 //     give it the value of:
 //     'My name is (full name), and I think (lucky number) is a winner!'.
@@ -34,13 +34,14 @@ let food = 'breakfast';
 // 8 - Create a variable called `pets` and set it to the value of the number of pets you have
 //     Console log the value of `pets`
 let pets = 1;
-  console.log(pets);
+  console.log('my pets ' + pets);
 
 // 9 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
 let friendsPets = 2;
+  console.log ('friends pets ' + friendsPets);
 // 10 - Add two pets to your `pets` variable
 pets += 2;
-  console.log(pets);
+  console.log('updated my pets' + pets);
 // 11 - Create a constant variable called `allowedPets` and set it to a number value of your choice
 const allowedPets = 3;
 // 12 - Create a variable called `result`. Create a conditional:
@@ -85,8 +86,6 @@ if (pets < allowedPets) {
   else if (pets == allowedPets) {
     petStatus = 'I have enough pets'
   }
-  //This code didn't work properly when I had pets = allowedPets. I needed to have pets ===allowedPets
-  //Why did pets = allowedPets come out at "true" even if they weren't equal?
   else {
     petStatus = 'Oh no, I have too many pets!'
   }
@@ -106,7 +105,7 @@ if (pets >= friendsPets) {
   else {
    mostPets = friendsPets
   }
-    console.log (mostPets);
+    console.log ('most pets ' + mostPets);
 
 // 16 - Make a variable called `luckyResult`
 //      Write a *switch* statement that sets `luckyResult` to:
